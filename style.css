@@ -1,0 +1,48 @@
+body {
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  display: flex;
+  background: #03050a;
+}
+
+.box {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(img.webp);
+  background-size: cover;
+  background-position: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.box::after {
+  content: "";
+  position: absolute;
+  background-color: #03050a;
+  background-image: url(img.webp);
+  background-size: cover;
+  background-position: center;
+  inset: 6px;
+}
+.box::before{
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient(to right,#bf9534,#fcf6ba,#b38728,#fbf5b7);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: rotate(0deg)
+    }100%{
+        transform: rotate(360deg);
+    }
+}
+
